@@ -1,0 +1,64 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+
+
+        <item name="backgroundcolor">#F1F1F1</item>
+        <item name="textcolor">#000</item>
+        <item name="texttitle">#000</item>
+
+
+    </style>
+
+
+    <style name="DarkAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#292929</item>
+        <item name="colorPrimaryDark">#000</item>
+        <item name="colorAccent">#fff</item>
+        <item name="backgroundcolor">#303030</item>
+        <item name="textcolor">#fff</item>
+        <item name="texttitle">#fff</item>
+
+
+    </style>
+
+
+
+
+
+    <!--custom font of navigation bottom-->
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+    </style>
+
+
+    <style name="TextView"  />
+    <style name="TextView.Label">
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:background">#63FFFFFF</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+
+
+
+
+
+</resources>

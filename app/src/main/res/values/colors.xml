@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+
+    <color name="color_gradient_main">#48acb8</color>
+    <color name="MyTransParent">#00FFFFFF</color>
+
+    <color name="blue_light">#b2ffff</color>
+    <color name="blue_dark">#48acb8</color>
+    <color name="pink_light">#ffb2ff</color>
+    <color name="pink_dark">#b64fc8</color>
+
+    <color name="txt_color_main">#414141</color>
+
+
+    <!--nav bar colors-->
+    <color name="colorPrimaryLight">#84FF19</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorDivider">#2FE897</color>
+    <color name="colorBorder">#a7a4a4</color>
+    <color name="colorExtra">#fffac1</color>
+
+</resources>

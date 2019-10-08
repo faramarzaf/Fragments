@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Fragments</string>
+
+    <string name="myprofile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="home">Home</string>
+
+
+
+</resources>
