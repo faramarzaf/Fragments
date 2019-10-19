@@ -1,5 +1,6 @@
 package com.faramarz.tictacdev.fragments.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
@@ -8,11 +9,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.faramarz.tictacdev.fragments.R;
+import com.faramarz.tictacdev.fragments.main_fragments.HomeFrag;
 import com.faramarz.tictacdev.fragments.model.Car;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,12 +30,13 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.MyViewHolder> {
     private SparseBooleanArray selectedItems;
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnLongClickListener {
-        TextView car_name,car_price;
+        TextView car_name, car_price;
         ImageView car_avatar;
         LinearLayout car_container;
+
         public MyViewHolder(View view) {
             super(view);
-           car_name = view.findViewById(R.id.car_name);
+            car_name = view.findViewById(R.id.car_name);
             car_price = view.findViewById(R.id.car_price);
             car_avatar = view.findViewById(R.id.car_avatar);
             car_container = view.findViewById(R.id.car_container);
@@ -49,6 +56,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.MyViewHolder> {
         this.listener = listener;
 
     }
+
     @NonNull
     @Override
     public CarAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -61,7 +69,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.MyViewHolder> {
         final Car car = carsList.get(position);
         holder.car_name.setText(car.getName());
         holder.car_price.setText(car.getPrice());
-        applyAvatarCar(holder,car);
+        applyAvatarCar(holder, car);
         applyClickEvents(holder, position);
     }
 
@@ -76,14 +84,14 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.MyViewHolder> {
     }
 
     private void applyAvatarCar(MyViewHolder holder, Car car) {
-            Glide.with(mContext).load(car.getAvatar())
-                   // make avatar circle with this .apply(RequestOptions.circleCropTransform())
-                    .into(holder.car_avatar);
+        Glide.with(mContext).load(car.getAvatar())
+                // make avatar circle with this .apply(RequestOptions.circleCropTransform())
+                .into(holder.car_avatar);
 
     }
 
     private void applyClickEvents(MyViewHolder holder, final int position) {
-          holder.car_container.setOnClickListener(new View.OnClickListener() {
+        holder.car_container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 listener.onCarRowClicked(position);

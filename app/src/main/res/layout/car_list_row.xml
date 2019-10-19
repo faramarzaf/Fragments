@@ -14,17 +14,18 @@
 
         <ImageView
             android:id="@+id/car_avatar"
-            android:layout_width="@dimen/_70sdp"
-            android:layout_height="@dimen/_70sdp"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
             android:layout_gravity="center"
-            android:padding="8dp" />
+            android:layout_marginLeft="5dp"
+            />
 
         <TextView
             android:id="@+id/car_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginLeft="5dp"
             android:gravity="start"
             android:lines="1"
             android:padding="8dp"
@@ -37,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
-            android:layout_marginRight="@dimen/_3sdp"
+            android:layout_marginRight="9dp"
             android:gravity="end|bottom"
             android:textColor="#5C5C5C"
             android:textSize="14sp"

@@ -29,14 +29,14 @@ public class EditDialog extends DialogFragment implements View.OnClickListener {
     public static final String LAST_NAME = "lastNameKey";
     public static final String EMAIL = "emailKey";
 
-    @BindView(R.id.edt_first_name)
-    EditText edt_first_name;
-    @BindView(R.id.edt_last_name)
-    EditText edt_last_name;
-    @BindView(R.id.edt_email)
-    EditText edt_email;
-    @BindView(R.id.btn_save_info)
-    Button btn_save_info;
+    @BindView(R.id.edtFirstName)
+    EditText edtFirstName;
+    @BindView(R.id.edtLastName)
+    EditText edtLastName;
+    @BindView(R.id.edtEmail)
+    EditText edtEmail;
+    @BindView(R.id.btnSaveInfo)
+    Button btnSaveInfo;
 
 
     @Nullable
@@ -45,7 +45,7 @@ public class EditDialog extends DialogFragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.dialog_edit_profile, container, false);
         ButterKnife.bind(this, view);
         RetrieveData();
-        btn_save_info.setOnClickListener(this);
+        btnSaveInfo.setOnClickListener(this);
         return view;
 
     }
@@ -53,17 +53,17 @@ public class EditDialog extends DialogFragment implements View.OnClickListener {
     void RetrieveData() {
         SharedPreferences preferences = this.getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         if (preferences.contains(FIRST_NAME) && preferences.contains(LAST_NAME) && preferences.contains(EMAIL)) {
-            edt_first_name.setText(preferences.getString(FIRST_NAME, null));
-            edt_last_name.setText(preferences.getString(LAST_NAME, null));
-            edt_email.setText(preferences.getString(EMAIL, null));
+            edtFirstName.setText(preferences.getString(FIRST_NAME, null));
+            edtLastName.setText(preferences.getString(LAST_NAME, null));
+            edtEmail.setText(preferences.getString(EMAIL, null));
         }
     }
 
     @Override
     public void onClick(View v) {
-        String fName = edt_first_name.getText().toString();
-        String lName = edt_last_name.getText().toString();
-        String eMail = edt_email.getText().toString();
+        String fName = edtFirstName.getText().toString();
+        String lName = edtLastName.getText().toString();
+        String eMail = edtEmail.getText().toString();
         SharedPreferences preferences = this.getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         SharedPreferences.Editor edt = preferences.edit();
         edt.putString(FIRST_NAME, fName);
