@@ -30,7 +30,6 @@ public class SettingFrag extends Fragment {
     String Mypre = "Save", SIZE = "size";
     TextView title1, title2, text_test;
     SeekBar seekbar_size;
-    Button btn_save;
     Switch aswitch;
     int fontsize = 16;
     SharedPreferences pref;
@@ -72,7 +71,6 @@ public class SettingFrag extends Fragment {
         title2 = view.findViewById(R.id.title2);
         text_test = view.findViewById(R.id.text_test);
         seekbar_size = view.findViewById(R.id.seekbar_size);
-        btn_save = view.findViewById(R.id.btn_save);
         aswitch = view.findViewById(R.id.aswitch);
     }
 

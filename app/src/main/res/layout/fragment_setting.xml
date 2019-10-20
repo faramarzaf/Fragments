@@ -6,26 +6,23 @@
     tools:context=".MainActivity">
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?attr/backgroundcolor"
         android:gravity="right"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
 
         <TextView
+            android:id="@+id/title1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="Text"
             android:textColor="?attr/colorAccent"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:id="@+id/title1"
-            />
+            android:textStyle="bold" />
 
 
         <androidx.cardview.widget.CardView
@@ -58,32 +55,19 @@
                     android:layout_height="wrap_content" />
 
 
-                <Button
-                    android:id="@+id/btn_save"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="?attr/backgroundcolor"
-                    android:text="Save"
-                    android:textColor="?attr/textcolor" />
-
-
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
 
-
-
         <TextView
+            android:id="@+id/title2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="Change theme"
             android:textColor="?attr/colorAccent"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:id="@+id/title2"
-            />
+            android:textStyle="bold" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -95,19 +79,18 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="10dp"
                 android:background="?attr/backgroundcolor"
-                >
+                android:orientation="vertical"
+                android:padding="10dp">
 
                 <Switch
                     android:id="@+id/aswitch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layoutDirection="ltr"
-                    android:gravity="end"
                     android:layout_gravity="end"
-                       android:textColor="?attr/textcolor" />
+                    android:gravity="end"
+                    android:layoutDirection="ltr"
+                    android:textColor="?attr/textcolor" />
 
             </LinearLayout>
 

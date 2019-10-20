@@ -17,8 +17,7 @@
             android:layout_width="85dp"
             android:layout_height="85dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="5dp"
-            />
+            android:layout_marginLeft="3dp" />
 
         <TextView
             android:id="@+id/car_name"
@@ -38,10 +37,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
-            android:layout_marginRight="9dp"
-            android:gravity="end|bottom"
-            android:textColor="#5C5C5C"
-            android:textSize="14sp"
+            android:gravity="end"
+            android:textColor="#535353"
+            android:textSize="13sp"
             android:textStyle="italic" />
 
     </LinearLayout>
