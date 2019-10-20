@@ -61,7 +61,6 @@ public class ProfileFrag extends Fragment implements View.OnClickListener {
         firstName.setText(fName);
         lastName.setText(lName);
         email.setText(eMail);
-
         btn_edit.setOnClickListener(this);
         return view;
 
@@ -74,7 +73,7 @@ public class ProfileFrag extends Fragment implements View.OnClickListener {
 
     void showEditDialog() {
         EditDialog editDialog = new EditDialog();
-        editDialog.show(getFragmentManager(),"EditDialog");
+        editDialog.show(getFragmentManager(), "EditDialog");
     }
 
 

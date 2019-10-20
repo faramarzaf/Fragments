@@ -98,6 +98,7 @@ public class SettingFrag extends Fragment {
                 fontsize = progress;
                 text_test.setTextSize(fontsize);
                 title1.setTextSize(fontsize);
+                title2.setTextSize(fontsize);
                 editor.putInt(SIZE, fontsize);
                 editor.apply();
 
@@ -125,6 +126,7 @@ public class SettingFrag extends Fragment {
             seekbar_size.setProgress(fontsize);
             text_test.setTextSize(fontsize);
             title1.setTextSize(fontsize);
+            title2.setTextSize(fontsize);
         }
 
     }
@@ -146,7 +148,6 @@ public class SettingFrag extends Fragment {
                     sharedPref.setNightMode(false);
                     restartApp();
                 }
-
             }
 
         });
