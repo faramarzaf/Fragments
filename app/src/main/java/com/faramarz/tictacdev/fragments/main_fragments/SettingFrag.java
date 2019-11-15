@@ -99,8 +99,6 @@ public class SettingFrag extends Fragment {
                 title2.setTextSize(fontsize);
                 editor.putInt(SIZE, fontsize);
                 editor.apply();
-
-
             }
 
             @Override
@@ -145,6 +143,7 @@ public class SettingFrag extends Fragment {
                 } else {
                     sharedPref.setNightMode(false);
                     restartApp();
+
                 }
             }
 
@@ -160,7 +159,6 @@ public class SettingFrag extends Fragment {
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.replace(R.id.frame_container, fr);
         fragmentTransaction.commit();
-
 
     }
 

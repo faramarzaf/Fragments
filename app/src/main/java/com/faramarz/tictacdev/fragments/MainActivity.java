@@ -1,10 +1,8 @@
 package com.faramarz.tictacdev.fragments;
 
-import android.Manifest;
-import android.content.Context;
+
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
+
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,7 +12,6 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.faramarz.tictacdev.fragments.main_fragments.HomeFrag;
@@ -43,27 +40,23 @@ public class MainActivity extends AppCompatActivity {
     void setNavigationPages() {
         loadFragment(new HomeFrag());
         bottomNavigation.inflateMenu(R.menu.menu_nav);
-         bottomNavigation.getMenu().findItem(R.id.item_2).setChecked(true);
+        bottomNavigation.getMenu().findItem(R.id.item_2).setChecked(true);
         bottomNavigation.setSelectedItemId(R.id.item_2);
-        bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int id = item.getItemId();
-                switch (id) {
-                    case R.id.item_1:
-                        loadFragment(ProfileFrag.newInstance());
-                        return true;
-                    case R.id.item_2:
-                        loadFragment(HomeFrag.newInstance());
-                        return true;
-                    case R.id.item_3:
-                        settingPermission();
-                        loadFragment(SettingFrag.newInstance());
-                        return true;
-                }
-                return true;
+        bottomNavigation.setOnNavigationItemSelectedListener(item -> {
+            int id = item.getItemId();
+            switch (id) {
+                case R.id.item_1:
+                    loadFragment(ProfileFrag.newInstance());
+                    return true;
+                case R.id.item_2:
+                    loadFragment(HomeFrag.newInstance());
+                    return true;
+                case R.id.item_3:
+                    settingPermission();
+                    loadFragment(SettingFrag.newInstance());
+                    return true;
             }
+            return true;
         });
     }
 
@@ -77,9 +70,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     private void loadFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
         transaction.replace(R.id.frame_container, fragment);
         transaction.addToBackStack(null);
         transaction.commit();

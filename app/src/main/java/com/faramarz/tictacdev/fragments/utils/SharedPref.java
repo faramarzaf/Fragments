@@ -14,7 +14,7 @@ public class SharedPref {
     public void setNightMode(boolean state) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean("NightMode", state);
-        editor.apply();
+        editor.commit();
     }
 
 
