@@ -88,7 +88,6 @@ public class HomeFrag extends Fragment implements SwipeRefreshLayout.OnRefreshLi
 
     private void getCars() {
         swipeRefreshLayout.setRefreshing(true);
-
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
         Call<List<Car>> call = apiService.getCars();
         call.enqueue(new Callback<List<Car>>() {
