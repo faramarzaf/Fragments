@@ -15,7 +15,7 @@
         <ImageView
             android:id="@+id/car_avatar"
             android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginLeft="3dp" />
 
@@ -38,6 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
             android:gravity="end"
+            android:layout_marginEnd="12dp"
             android:textColor="#535353"
             android:textSize="13sp"
             android:textStyle="italic" />

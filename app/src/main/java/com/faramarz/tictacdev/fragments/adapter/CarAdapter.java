@@ -1,8 +1,6 @@
 package com.faramarz.tictacdev.fragments.adapter;
 
-import android.app.Activity;
 import android.content.Context;
-import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,20 +12,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import com.faramarz.tictacdev.fragments.R;
-import com.faramarz.tictacdev.fragments.main_fragments.HomeFrag;
 import com.faramarz.tictacdev.fragments.model.Car;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class CarAdapter extends RecyclerView.Adapter<CarAdapter.MyViewHolder> {
 
     private Context mContext;
     private CarAdapterListener listener;
-    List<Car> carsList = new ArrayList<>();
-    private SparseBooleanArray selectedItems;
+    private List<Car> carsList;
+
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnLongClickListener {
         TextView car_name, car_price;
@@ -51,7 +46,6 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.MyViewHolder> {
 
     public CarAdapter(Context mContext, List<Car> carsList, CarAdapterListener listener) {
         this.mContext = mContext;
-        this.carsList = carsList;
         this.carsList = carsList;
         this.listener = listener;
 
