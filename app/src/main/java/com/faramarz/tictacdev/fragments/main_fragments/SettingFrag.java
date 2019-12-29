@@ -2,25 +2,21 @@ package com.faramarz.tictacdev.fragments.main_fragments;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-
-
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.faramarz.tictacdev.fragments.R;
 import com.faramarz.tictacdev.fragments.utils.SharedPref;
